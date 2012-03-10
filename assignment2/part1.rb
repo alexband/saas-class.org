@@ -32,3 +32,13 @@ puts 5.dollars.in(:euros) ==  5 / 1.292
 puts 10.euros.in(:rupees) == 10 * 1.292 / 0.019
 puts 1.dollar.in(:rupees) == 1 / 0.019
 puts 10.rupees.in(:euro) == 10 * 0.019 / 1.292
+
+class String
+  def palindrome?
+    new_string = self.gsub(/\W/,'').downcase.reverse
+    return self.gsub(/\W/,'').downcase == new_string
+  end
+end
+
+puts 'foo'.palindrome?
+puts "A man, a plan, a canal -- Panama".palindrome?

@@ -45,7 +45,7 @@ puts "A man, a plan, a canal -- Panama".palindrome?
 
 module Enumerable
   def palindrome?
-    if self.reverse == self
+    if self.to_a.reverse == self.to_a
       true
     else
       false
@@ -54,4 +54,8 @@ module Enumerable
 end
 
 puts [1,2,3,2,1].palindrome?
-puts [1,2,3,1,1].palindrome?
+puts [1,2,3,2,1].palindrome?
+a = {"hello" => "world"}
+puts a.palindrome?
+puts "If I had a hi-fi".chars.palindrome?
+puts 10.times.palindrome?

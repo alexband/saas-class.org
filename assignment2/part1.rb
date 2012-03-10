@@ -42,3 +42,16 @@ end
 
 puts 'foo'.palindrome?
 puts "A man, a plan, a canal -- Panama".palindrome?
+
+module Enumerable
+  def palindrome?
+    if self.reverse == self
+      true
+    else
+      false
+    end
+  end
+end
+
+puts [1,2,3,2,1].palindrome?
+puts [1,2,3,1,1].palindrome?
